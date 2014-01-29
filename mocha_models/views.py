@@ -180,15 +180,15 @@ def myRender(request, template, context={}):
 @login_required(login_url='/login/')
 def searchUsers(request):
 	if request.method == 'POST': # If the form has been submitted...
-		searchStr = request.POST.get('search', '')
-		print searchStr
+		searchStr = request.POST['search']
 		searchStr = searchStr.lower()
-		users = dbfetchall(
-			"""
-			SELECT username from auth_users
-			WHERE username LIKE '%%s%'
-			""" % searchStr
-			)
+		sqlcmd = """
+			SELECT username from auth_user
+			WHERE username LIKE '%""" + searchStr + """%'
+			""" 
+		print sqlcmd
+		users = dbfetchall(sqlcmd)
+		
 		usernames = []
 		for c in users:
 			usernames.append(c['username'])

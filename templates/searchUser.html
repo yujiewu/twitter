@@ -1,5 +1,5 @@
-<form action="/subscribeUser/" method="post"> {% csrf_token %}
+<form action="/subscribeUser" method="post"> {% csrf_token %}
 <input type='hidden' name='csrfmiddlewaretoken' value='Vx6BZZ1yrgO0Y6Cp8b5zoFL8nQzMwAOk' />
-<tr><th><label for="id_search">Search:</label></th><td><input id="id_search" maxlength="140" name="search" type="text" /></td></tr>
+<tr><th><label for="id_search">Search:</label></th><td><input id="search" maxlength="140" name="search" type="text" /></td></tr>
 <input type="submit" value="Submit" />
 </form>
