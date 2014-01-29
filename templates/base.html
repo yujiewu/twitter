@@ -1,0 +1,9 @@
+{% load tabs %}
+{% block navigation %}
+<ul id="top-nav">
+    <li><a href="/tweet" class="{% ifactivetab "topnav" "create_topic" %}active{% else %}inactive{% endifactivetab %}">Post A Tweet</a></li>
+    <li><a href="/subscribeUser" class="{% ifactivetab "topnav" "subscribe_topic" %}active{% else %}inactive{% endifactivetab %}">Subscribe to a User</a></li>
+    <li><a href="/displaytweets" class="{% ifactivetab "topnav" "subscribe_topic" %}active{% else %}inactive{% endifactivetab %}">Display Tweets</a></li>
+    <li><a href="/myTweets" class="{% ifactivetab "topnav" "subscribe_topic" %}active{% else %}inactive{% endifactivetab %}">My Tweets</a></li>
+</ul>
+{% endblock %}

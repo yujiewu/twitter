@@ -1,0 +1,9 @@
+{% load tabs %}
+{% block navigation %}
+<h2> Tweets </h2>
+<ul id="top-nav">
+    {% for u in tweets %}
+	<li> <h3> {{u.username}} : </h3> {{u.content}} </li>
+    {% endfor %}
+</ul>
+{% endblock %}
