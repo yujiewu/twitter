@@ -1,0 +1,9 @@
+{% load tabs %}
+{% block navigation %}
+<h2> Users </h2>
+<ul id="top-nav">
+    {% for u in users %}
+	<li> {{u}} <a href="/subscribe/{{u}}">Subscribe</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
