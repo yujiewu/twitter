@@ -5,3 +5,5 @@ modify the settings file to suit the postgres db configurations
 Run the server as 
 
 python manage.py runserver 0.0.0.0:8000
+
+This is edited
